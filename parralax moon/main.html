@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parallax effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="image/stars.png" id="stars">
+        <img src="image/moon.png" id="moon">
+        <img src="image/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Parallax Effect</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="image/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p><span style="margin-left: 3em">Défilement parallaxe (parallax scrolling en anglais) est le déplacement à des vitesses différentes de
+            différents calques de décors dans un jeu vidéo en deux dimensions, lors d'un défilement (ou scrolling).
+            Cette technique a été popularisée par le jeu d'arcade Moon Patrol sorti en 19821,2. Il s'agit en fait de
+            l'adaptation d'une technique très utilisée pour les dessins animés, qui consiste à faire défiler des
+            celluloïds à des vitesses différentes. Ainsi, un décor utilisant cette technique se voit divisé en plusieurs
+            calques. Le calque le plus éloigné de l'observateur (l'arrière-plan) défile le moins vite. Plus on remonte
+            vers l'avant-plan et plus la vitesse de défilement des calques augmente. Les différents plans jouent
+            également sur la perspective atmosphérique pour accentuer l'impression de profondeur. Les premiers plans
+            voient ainsi leur couleurs davantage désaturées, et les plus au fond ont alors leur couleurs plus désaturées
+            et bleutées en plein jour, ou assombries en pleine nuit. Des techniques de floutages sur les plateformes
+            plus récentes permettent d'accentuer la profondeur de champ.parallaxe avec perspective atmosphérique
+            (modification des couleurs avec la profondeur)<br><br>
+
+
+            Comme dans tout jeu utilisant un défilement, le déplacement du décor est plus ou moins synchronisé avec le
+            défilement du joueur à l'intérieur du niveau et il existe trois types de défilement : horizontal, vertical,
+            ou multidirectionnel.<br><br>
+
+            Cette technique en particulier est très utilisée sur les consoles et ordinateurs 16 bits, et vise à donner
+            une impression de profondeur à travers des portions de décors défilant à vitesse légèrement variable. On
+            peut parler de « perspective de mouvement », généralement en utilisant les possibilités matérielles de la
+            plateforme, permettant de synchronisation par le processeur vidéo (au moment de l'affichage, plutôt qu'un
+            travail de copie du processeur graphique) de différents plans, une valeur de couleur (ou un canal alpha pour
+            les plus évoluées permettant de représenter la transparence sur chacun des plans. Sur les plateformes
+            modernes utilisant des technologies 3D telles qu'OpenGL, les décors sont tracés sur différentes surface
+            plane, qui sont ensuite synchronisées par le processeur géométrique.</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let moutains_behind = document.getElementById('mountains_behind')
+        let moutains_front = document.getElementById('mountains_front')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let header = document.querySelector('header')
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            moutains_behind.style.top = value * 0.5 + 'px';
+            moutains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+            
+        })
+    </script>
+</body>
+
+</html>
