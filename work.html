@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Parallax effect</title>
+    <link rel="stylesheet" href="script/work/css/work.css">
+    <script src="script/work/javascript/work.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Cdurdetrouver</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Contact</a></li>
+                <ul class="UlContact">
+                    <li><a href="">Mail</a></li>
+                    <li><a href="">Discord</a></li>
+                    <li><a href="">Instagram</a></li>
+                </ul>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="left">
+            <h1>
+                Décrouvez:
+            </h1>
+            <ul>
+                <li>
+                    <a href="#carrousel">HTML effect</a>
+                </li>
+                <li>
+                    <a href="#carrousel">Club NSI</a>
+                </li>
+                <li>
+                    <a href="#carrousel">Altaïs's quest</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="item" style="background-image: url('image/work/parallax.png');">
+                <a href="index.html">
+                    <p>HTML effect</p>
+                </a>
+            </div>
+            <div class="item" style="background-image: url('image/work/club_nsi.png');">
+                <a href="https://discord.com/invite/sRGfAgYbZQ" target="_blank">
+                    <p>Club NSI</p>
+                </a>
+            </div>
+            <div class="item" style="background-image: url('image/work/altais.png');">
+                <a href="https://www.altais-quest.com" target="_blank">
+                    <p>Altaïs's quest</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="text" id="carrousel">
+        <div class="changehidden">
+            <p id="effect" data-slide="1" class="active">
+                En html, il y a beaucoup d'effet possible. On retrouve des animations, des éléments qui bougent dans
+                tous les sens, et même des jeux.
+            </p>
+            <p id="NSI" data-slide="2">
+                Le club NSI c'est quoi ? Ce sont des cours de programmation destinés aux élèves de Loritz
+                afin d'apprendre à coder de l'HTML, du python etc...
+            </p>
+            <p id="altais" data-slide="3">
+                <u>Altaïs's Quest</u> est un projet de lycéen qui vise à créer un jeux comme zelda, ce qui a bercé notre
+                enfance. mais le <a href="https://www.altais-qeust.com">site</a> vous en parlera mieux que moi
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

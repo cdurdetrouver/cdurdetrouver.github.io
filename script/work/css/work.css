@@ -1,0 +1,146 @@
+@import url("http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 15px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#2b1055, #7597de);
+}
+body .container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(16, 1fr);
+}
+body .container .left {
+  grid-column: 1/5;
+  min-height: 50vh;
+}
+body .container .left h1 {
+  font-weight: 400;
+  font-size: 3em;
+  color: #fff;
+  padding: 30px;
+}
+body .container .left ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .left ul li a {
+  font-weight: 300;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+}
+body .container .left ul li a:hover {
+  font-size: 1.7em;
+}
+body .container .right {
+  grid-column: 5/16;
+  display: flex;
+  gap: 2rem;
+}
+body .container .right .item {
+  width: 33%;
+  background-position: center;
+  background-size: 400%;
+  border-radius: 0.5rem;
+  transition: all 300ms ease;
+}
+body .container .right .item a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+body .container .right .item a p {
+  border-radius: 0.5rem;
+  min-height: 15vh;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  background: linear-gradient(transparent, #1c051c);
+}
+body .container .right .item:hover {
+  width: 100%;
+  background-size: 150%;
+}
+body .text {
+  width: 50%;
+  height: 50vh;
+  overflow: hidden;
+  padding: 20px;
+  background: red;
+}
+body .text .changehidden {
+  position: relative;
+  top: 0;
+  left: 5;
+}
+body .text .changehidden p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+body .text .changehidden #NSI {
+  visibility: visible;
+}
+body .text .changehidden #effect {
+  visibility: hidden;
+}
+body .text .changehidden #altais {
+  visibility: hidden;
+}/*# sourceMappingURL=work.css.map */

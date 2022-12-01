@@ -1,0 +1,180 @@
+@import url("http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+$white: #fff;
+$black:#1c051c;
+$bleuviolet:#2b1055;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      list-style: none;
+      margin: 20px;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        border-radius: 20px;
+        padding: 6px 15px;
+      }
+
+      a:hover,
+      a.active {
+        background: $white;
+        color: #2b1055;
+      }
+    }
+  }
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient($bleuviolet, #7597de);
+
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(16, 1fr);
+  
+    .left {
+      grid-column: 1/5;
+      min-height: 50vh;
+  
+      h1 {
+        font-weight: 400;
+        font-size: 3em;
+        color: $white;
+        padding: 30px;
+      }
+  
+      ul {
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        li {
+          a {
+            font-weight: 300;
+            font-size: 1.5em;
+            color: $white;
+            text-decoration: none;
+          }
+  
+          a:hover {
+            font-size: 1.7em;
+          }
+        }
+      }
+    }
+  
+    .right {
+      grid-column: 5/16;
+      display: flex;
+      gap: 2rem;
+  
+      .item {
+        width: 33%;
+        background-position: center;
+        background-size: 400%;
+        border-radius: 0.5rem;
+        transition: all 300ms ease;
+  
+        a {
+          height: 100%;
+          width: 100%;
+  
+          display: flex;
+          align-items: flex-end;
+  
+          text-decoration: none;
+  
+          p {
+            border-radius: 0.5rem;
+            min-height: 15vh;
+            width: 100%;
+  
+            color: $white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding: 20px;
+  
+            background: linear-gradient(transparent, $black);
+          }
+        }
+      }
+  
+      .item:hover {
+        width: 100%;
+        background-size: 150%;
+      }
+    }
+  }
+  
+  .text {
+    width: 50%;
+    height: 50vh;
+    overflow: hidden;
+    padding: 20px;
+    background: red;
+  
+    .changehidden {
+      position: relative;
+      top: 0;
+      left: 5;
+  
+      p {
+        position: absolute;
+        left: 0;
+        right: 0;
+  
+        color: $white;
+        font-size: 1.5em;
+        text-align: center;
+      }
+  
+      #NSI {
+        visibility: visible;
+      }
+  
+      #effect {
+        visibility: hidden;
+      }
+  
+      #altais {
+        visibility: hidden;
+      }
+    }
+  }
+}
